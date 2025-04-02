@@ -20,9 +20,9 @@ public class LogisticsManager {
              if (instance == null){
                  instance = new LogisticsManager();
              }
-            } catch (Exception e) {
-                System.out.println(e.toString());
-                return instance;
+//            } catch (Exception e) {
+//                System.out.println(e.toString());
+//                return instance;
             } finally {
                 lock.unlock();
             }
@@ -32,12 +32,12 @@ public class LogisticsManager {
 
     public void registerTransport(Transport transport){
         synchronized (this.activeTransports) {
-            activeTransports.add(transport);
+            this.activeTransports.add(transport);
         }
 
         new Thread(() -> {
             transport.deliver();
-            updateDeliveryStatus(transport,DeliveryStatus.COMPLETED);
+            updateDeliveryStatus(transport, DeliveryStatus.COMPLETED);
         }).start();
     }
 
@@ -54,7 +54,7 @@ public class LogisticsManager {
         synchronized (this.activeTransports){
             System.out.println("Deliveries: ");
             for (Transport transport : this.activeTransports) {
-                System.out.println(transport.getType() + transport.getStatus());
+                System.out.println(transport.getType() + " " +  transport.getStatus());
             }
         }
     }

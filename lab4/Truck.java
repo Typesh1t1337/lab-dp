@@ -5,7 +5,13 @@ public class Truck implements Transport{
     private DeliveryStatus status  = DeliveryStatus.IN_PROGRESS;
     @Override
     public void deliver() {
-        System.out.println("delivery cargo by land");
+        try{
+            System.out.println("Truck delivery started...");
+            Thread.sleep(1000);
+            System.out.println("Truck  delivery completed.");
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
     }
 
     @Override
