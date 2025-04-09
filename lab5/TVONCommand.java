@@ -4,8 +4,9 @@ public class TVONCommand implements Command {
     private SmartTV tv;
 
     @Override
-    public void execute() {
+    public String  execute() {
         tv.turnOn();
+        return "executed";
     }
 
     @Override

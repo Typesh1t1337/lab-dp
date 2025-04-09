@@ -7,6 +7,7 @@ public class SmartTV {
 
     public SmartTV() {
         this.isTurnedOn = false;
+        this.channel = 0;
     }
 
     public void turnOn(){

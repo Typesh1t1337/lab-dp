@@ -8,12 +8,15 @@ public class TurnOnCommand implements Command {
     }
 
     @Override
-    public void execute() {
+    public String execute() {
        light.turnOn();
+       System.out.println("sdddsds");
+       return "executedsss";
     }
 
     @Override
     public void undo(){
         light.turnOff();
     }
+
 }

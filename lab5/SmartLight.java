@@ -14,6 +14,5 @@ public class SmartLight {
 
     public void turnOff(){
         this.isTurnedOn = false;
-        System.out.println("Turned off");
     }
 }
