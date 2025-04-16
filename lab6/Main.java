@@ -11,6 +11,6 @@ public class Main {
         System.out.println("\n----------");
         StockMarketFacade facade = new StockMarketFacade();
         facade.analyzeAndDisplay("stock", "xml");
-        facade.analyzeAndDisplay("stock", "json");
+        facade.analyzeAndDisplay("name", "json");
     }
 }
