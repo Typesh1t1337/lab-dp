@@ -10,9 +10,9 @@ public class Main {
         DocumentReportCollection collection = new DocumentReportCollection();
 
         System.out.println("---------");
-        collection.addReport(new DocumentReport("file1.pdf", 100, "java"));
-        collection.addReport(new DocumentReport("file2.docx", 150, "design"));
-        collection.addReport(new DocumentReport("file3.pdf", 80, "pattern"));
+        collection.addReport(new DocumentReport("first.pdf", 100, "iterator"));
+        collection.addReport(new DocumentReport("second.docx", 150, "typeshi"));
+        collection.addReport(new DocumentReport("third.pdf", 80, "legitimate"));
 
         Iterator<DocumentReport> iterator = collection.iterator();
         while (iterator.hasNext()) {
